@@ -4,7 +4,7 @@ import android.content.Context;
 import android.widget.Toast;
 
 /**
- * Created by Neeraj on 19-Mar-16.
+ * Created by komal on 28-Sep-2019.
  */
 public class Message {
     public static void message(Context context,String message)

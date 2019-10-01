@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.hospital.komal.R;
 
 /**
- * Created by Neeraj on 07-Apr-16.
+ * Created by komal on 28-Sep-2019.
  */
 public class Wait_Appointment extends AppCompatActivity {
 

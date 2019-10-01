@@ -10,7 +10,7 @@ import com.hospital.komal.Personal_Info;
 import com.hospital.komal.R;
 
 /**
- * Created by Neeraj on 07-Apr-16.
+ * Created by komal on 28-Sep-2019.
  */
 public class Appointment extends AppCompatActivity {
 

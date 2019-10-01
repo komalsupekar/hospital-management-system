@@ -12,7 +12,7 @@ import com.hospital.komal.Patient.New_Appointment;
 import com.hospital.komal.Patient.Wait_Appointment;
 
 /**
- * Created by Neeraj on 01-Apr-16.
+ * Created by komal on 28-Sep-2019.
  */
 public class Personal_Info extends AppCompatActivity {
 

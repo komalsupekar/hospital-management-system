@@ -13,7 +13,7 @@ import com.hospital.komal.R;
 import java.util.ArrayList;
 
 /**
- * Created by Neeraj on 08-Apr-16.
+ * Created by komal on 027-Sep-2019.
  */
 public class Remaining_patient_bills extends AppCompatActivity {
 

@@ -15,7 +15,7 @@ import com.hospital.komal.Personal_Info;
 import com.hospital.komal.R;
 
 /**
- * Created by Neeraj on 17-Mar-16.
+ * Created by komal on 27-Sep-2019.
  */
 public class Doctor extends AppCompatActivity {
 

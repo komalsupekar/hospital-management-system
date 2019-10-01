@@ -10,7 +10,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 /**
- * Created by Neeraj on 14-Apr-16.
+ * Created by komal on 28-Sep-2019.
  */
 public class Services_offered extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
