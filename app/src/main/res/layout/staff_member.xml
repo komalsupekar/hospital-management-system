@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -8,36 +7,55 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.whysoserious.neeraj.hospitalmanagementsystem.MainActivity">
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/tv_s_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:textSize="30dp" />
+    </LinearLayout>
 
     <Button
-        android:id="@+id/bloginregister"
+        android:id="@+id/b_s_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:padding="15dp"
-        android:textAllCaps="false"
-        android:text="Login or Register"
-        android:textSize="17dp" />
-
-    <Button
-        android:textAllCaps="false"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:padding="15dp"
         android:onClick="onClick"
-        android:text="Doctors Available"
+        android:padding="15dp"
+        android:text="Personal Info"
+        android:textAllCaps="false"
         android:textSize="17dp" />
 
     <Button
-
-        android:textAllCaps="false"
+        android:id="@+id/b_s_assigned_doctor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:onClick="onClick"
         android:padding="15dp"
-        android:onClick="onClick2"
-        android:text="Services Provided"
+        android:text="List of Assigned Doctors"
+        android:textAllCaps="false"
         android:textSize="17dp" />
+
+    <Button
+        android:id="@+id/b_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="onClick"
+        android:padding="15dp"
+        android:text="Give/View Feedback"
+        android:textAllCaps="false"
+        android:textSize="17dp" />
+
 </LinearLayout>
