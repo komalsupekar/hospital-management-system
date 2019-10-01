@@ -5,16 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.hospital.komal.MainActivity">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="370dp"
+        android:layout_height="380dp"
+        android:layout_margin="0dp"
+        android:padding="0dp"
+        android:contentDescription="@string/app_name"
         android:src="@drawable/bg" />
 
     <Button
@@ -23,29 +26,29 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:padding="15dp"
-        android:textAllCaps="false"
         android:text="Login or Register"
+        android:textAllCaps="false"
         android:textSize="17dp" />
 
     <Button
-        android:textAllCaps="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:padding="15dp"
         android:onClick="onClick"
+        android:padding="15dp"
         android:text="Doctors Available"
+        android:textAllCaps="false"
         android:textSize="17dp" />
 
     <Button
 
-        android:textAllCaps="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:padding="15dp"
         android:onClick="onClick2"
+        android:padding="15dp"
         android:text="Services Provided"
+        android:textAllCaps="false"
         android:textSize="17dp" />
 
     <TextView
