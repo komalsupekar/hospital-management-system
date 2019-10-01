@@ -3,6 +3,7 @@ package com.hospital.komal.Desktop_Admin;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -83,7 +84,16 @@ public class Assign_Staff extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String d = s_doctor.getSelectedItem().toString();
-                String s = s_staff.getSelectedItem().toString();
+
+//      madhu
+                try {
+                    String s = s_staff.getSelectedItem().toString();
+                }catch (Exception e){
+                    Log.d("madhu", "onClick: error" +e.getCause());
+                    Log.d("madhu", "onClick: error" +e.getMessage());
+                }
+//      i am here
+
 
                 int id_d = s_doctor.getSelectedItemPosition();
                 int id_s = s_staff.getSelectedItemPosition();
