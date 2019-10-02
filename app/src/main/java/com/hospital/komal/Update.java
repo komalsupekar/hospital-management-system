@@ -31,9 +31,9 @@ import java.util.List;
 public class Update extends AppCompatActivity {
 
     EditText fname, lname, age, dd, yy, city, pincode, mobno, uname, password;
-    String tmp, fnames, lnames, ages, sexs, bgroups, dobs, dds, yys, mms, citys, pincodes, mobnos, unames, passwords, utypes, username, pass, date, month, year;
+    String tmp, fnames, lnames, ages, genders, bgroups, dobs, dds, yys, mms, citys, pincodes, mobnos, unames, passwords, utypes, username, pass, date, month, year;
     Button register;
-    Spinner mm, sex, bgroup, usertype;
+    Spinner mm, gender, bgroup, usertype;
 
     DatabaseHelper dbh;
 
@@ -60,7 +60,7 @@ public class Update extends AppCompatActivity {
         password = (EditText) findViewById(R.id.etpassword);
         register = (Button) findViewById(R.id.bregister);
         mm = (Spinner) findViewById(R.id.spinnermonth);
-        sex = (Spinner) findViewById(R.id.spinnersex);
+        gender = (Spinner) findViewById(R.id.spinnergender);
         usertype = (Spinner) findViewById(R.id.spinnerusertype);
         bgroup = (Spinner) findViewById(R.id.spinnerbgroup);
         dbh = new DatabaseHelper(this);
@@ -71,9 +71,9 @@ public class Update extends AppCompatActivity {
         category.add("Staff Member");
         category.add("Desktop Admin");
 
-        List<String> sexc = new ArrayList<>();
-        sexc.add("Male");
-        sexc.add("Female");
+        List<String> genderc = new ArrayList<>();
+        genderc.add("Male");
+        genderc.add("Female");
 
         List<String> bgroupc = new ArrayList<>();
         bgroupc.add("A+");
@@ -102,7 +102,7 @@ public class Update extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, category);
         ArrayAdapter<String> adapterm = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, months);
         ArrayAdapter<String> adapters = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, bgroupc);
-        ArrayAdapter<String> adapterb = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, sexc);
+        ArrayAdapter<String> adapterb = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, genderc);
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         adapterm.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -111,7 +111,7 @@ public class Update extends AppCompatActivity {
 
         usertype.setAdapter(adapter);
         mm.setAdapter(adapterm);
-        sex.setAdapter(adapters);
+        gender.setAdapter(adapters);
         bgroup.setAdapter(adapterb);
 
         DatabaseHelper dh = new DatabaseHelper(this);
@@ -141,9 +141,9 @@ public class Update extends AppCompatActivity {
         //SET SPINNERS
         tmp = z.getString(4);
         if (tmp.equals("Male")) {
-            sex.setSelection(0);
+            gender.setSelection(0);
         } else {
-            sex.setSelection(1);
+            gender.setSelection(1);
         }
 
         if (month.equals("Jan")) {
@@ -220,7 +220,7 @@ public class Update extends AppCompatActivity {
                 passwords = password.getText().toString();
                 mobnos = mobno.getText().toString();
                 mms = mm.getSelectedItem().toString();
-                sexs = sex.getSelectedItem().toString();
+                genders = gender.getSelectedItem().toString();
                 bgroups = bgroup.getSelectedItem().toString();
                 utypes = usertype.getSelectedItem().toString();
 
@@ -234,7 +234,7 @@ public class Update extends AppCompatActivity {
                         dds = "0" + dds;
                     dobs = dds + " " + mms + " " + yys;
 
-                    boolean b = dbh.update_user_credentials(username, pass, fnames, lnames, ages, dobs, citys, pincodes, unames, passwords, mobnos, utypes, sexs, bgroups);
+                    boolean b = dbh.update_user_credentials(username, pass, fnames, lnames, ages, dobs, citys, pincodes, unames, passwords, mobnos, utypes, genders, bgroups);
 
                     if (b) {
                         Message.message(Update.this, "User Info Updated Sucessfully");

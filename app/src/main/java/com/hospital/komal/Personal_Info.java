@@ -18,7 +18,7 @@ public class Personal_Info extends AppCompatActivity {
 
     String username,password,user_type;
     DatabaseHelper db;
-    TextView name,age,sex,dob,bgroup,utype,city,pincode,mobno,uname,pword;
+    TextView name,age,gender,dob,bgroup,utype,city,pincode,mobno,uname,pword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class Personal_Info extends AppCompatActivity {
 
         name = (TextView) findViewById(R.id.name);
         age = (TextView) findViewById(R.id.age);
-        sex = (TextView) findViewById(R.id.sex);
+        gender = (TextView) findViewById(R.id.gender);
         dob = (TextView) findViewById(R.id.dob);
         bgroup = (TextView) findViewById(R.id.bgroup);
         utype = (TextView) findViewById(R.id.utype);
@@ -51,7 +51,7 @@ public class Personal_Info extends AppCompatActivity {
 
             name.setText(name1+" "+name2);
             age.setText(y.getString(3));
-            sex.setText(y.getString(6));
+            gender.setText(y.getString(6));
             dob.setText(y.getString(5));
             bgroup.setText(y.getString(4));
             utype.setText(y.getString(7));

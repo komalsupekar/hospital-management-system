@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="16dp"
+    android:layout_margin="16sp"
     >
 
     <Button
@@ -12,10 +12,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:onClick="onClick"
-        android:padding="15dp"
+        android:padding="15sp"
         android:text="New Appointment"
         android:textAllCaps="false"
-        android:textSize="17dp" />
+        android:textSize="17sp" />
 
 
 

@@ -7,7 +7,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="16sp"
         android:gravity="center"
         android:text="@string/services_info"
         android:textSize="30sp"
@@ -16,7 +16,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="16sp"
         android:gravity="center"
         android:text="@string/services_modules"
         android:textSize="30sp"

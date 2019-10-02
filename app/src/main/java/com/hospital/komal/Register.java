@@ -31,9 +31,9 @@ import java.util.List;
 public class Register extends AppCompatActivity {
 
     EditText fname, lname, age, dd, yy, city, pincode, mobno, uname, password;
-    String fnames, lnames, ages, sexs, bgroups, dobs, dds, yys, mms, citys, pincodes, mobnos, unames, passwords, utypes;
+    String fnames, lnames, ages, genders, bgroups, dobs, dds, yys, mms, citys, pincodes, mobnos, unames, passwords, utypes;
     Button register;
-    Spinner usertype, mm, sex, bgroup;
+    Spinner usertype, mm, gender, bgroup;
 
     DatabaseHelper dbh;
 
@@ -56,7 +56,7 @@ public class Register extends AppCompatActivity {
         register = (Button) findViewById(R.id.bregister);
         usertype = (Spinner) findViewById(R.id.spinnerusertype);
         mm = (Spinner) findViewById(R.id.spinnermonth);
-        sex = (Spinner) findViewById(R.id.spinnersex);
+        gender = (Spinner) findViewById(R.id.spinnergender);
         bgroup = (Spinner) findViewById(R.id.spinnerbgroup);
         dbh = new DatabaseHelper(this);
 
@@ -67,9 +67,9 @@ public class Register extends AppCompatActivity {
         category.add("Staff Member");
         category.add("Desktop Admin");
 
-        List<String> sexc = new ArrayList<>();
-        sexc.add("Male");
-        sexc.add("Female");
+        List<String> genderc = new ArrayList<>();
+        genderc.add("Male");
+        genderc.add("Female");
 
         List<String> bgroupc = new ArrayList<>();
         bgroupc.add("A+");
@@ -98,7 +98,7 @@ public class Register extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, category);
         ArrayAdapter<String> adapterm = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, months);
         ArrayAdapter<String> adapters = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, bgroupc);
-        ArrayAdapter<String> adapterb = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, sexc);
+        ArrayAdapter<String> adapterb = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, genderc);
 
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -107,7 +107,7 @@ public class Register extends AppCompatActivity {
         adapterb.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         usertype.setAdapter(adapter);
         mm.setAdapter(adapterm);
-        sex.setAdapter(adapters);
+        gender.setAdapter(adapters);
         bgroup.setAdapter(adapterb);
 
         register.setOnClickListener(new View.OnClickListener() {
@@ -126,7 +126,7 @@ public class Register extends AppCompatActivity {
                 mobnos = mobno.getText().toString();
                 utypes = usertype.getSelectedItem().toString();
                 mms = mm.getSelectedItem().toString();
-                sexs = sex.getSelectedItem().toString();
+                genders = gender.getSelectedItem().toString();
                 bgroups = bgroup.getSelectedItem().toString();
 
                 if (fnames.equals("") || lnames.equals("") || ages.equals("") || dds.equals("") ||
@@ -147,7 +147,7 @@ public class Register extends AppCompatActivity {
                             dds = "0" + dds;
                         dobs = dds + " " + mms + " " + yys;
 
-                        boolean b = dbh.insert_user_credentials(fnames, lnames, ages, dobs, citys, pincodes, unames, passwords, mobnos, utypes, sexs, bgroups);
+                        boolean b = dbh.insert_user_credentials(fnames, lnames, ages, dobs, citys, pincodes, unames, passwords, mobnos, utypes, genders, bgroups);
                         if (b) {
                             Intent i;
                             Bundle bb = new Bundle();
