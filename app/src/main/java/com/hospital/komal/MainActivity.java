@@ -2,15 +2,12 @@ package com.hospital.komal;
 
 //import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-
-import java.sql.SQLData;
 
 public class MainActivity extends AppCompatActivity {
 
