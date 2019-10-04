@@ -64,8 +64,7 @@ public class Register extends AppCompatActivity {
         List<String> category = new ArrayList<>();
         category.add("Patient");
         category.add("Doctor");
-        category.add("Staff Member");
-        category.add("Desktop Admin");
+        category.add("Admin");
 
         List<String> genderc = new ArrayList<>();
         genderc.add("Male");
@@ -95,20 +94,20 @@ public class Register extends AppCompatActivity {
         months.add("Nov");
         months.add("Dec");
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, category);
-        ArrayAdapter<String> adapterm = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, months);
-        ArrayAdapter<String> adapters = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, bgroupc);
-        ArrayAdapter<String> adapterb = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, genderc);
+        ArrayAdapter<String> acat = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, category);
+        ArrayAdapter<String> amonth = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, months);
+        ArrayAdapter<String> abgroup = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, bgroupc);
+        ArrayAdapter<String> agender = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, genderc);
 
 
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        adapterm.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        adapters.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        adapterb.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        usertype.setAdapter(adapter);
-        mm.setAdapter(adapterm);
-        gender.setAdapter(adapters);
-        bgroup.setAdapter(adapterb);
+        acat.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        amonth.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        abgroup.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        agender.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        usertype.setAdapter(acat);
+        mm.setAdapter(amonth);
+        gender.setAdapter(abgroup);
+        bgroup.setAdapter(agender);
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -159,8 +158,6 @@ public class Register extends AppCompatActivity {
                                 i = new Intent(Register.this, Patient.class);
                             } else if (utypes.equals("Doctor")) {
                                 i = new Intent(Register.this, Doctor.class);
-                            } else if (utypes.equals("Staff Member")) {
-                                i = new Intent(Register.this, Staff_Member.class);
                             } else {
                                 i = new Intent(Register.this, Desktop_Admin.class);
                             }

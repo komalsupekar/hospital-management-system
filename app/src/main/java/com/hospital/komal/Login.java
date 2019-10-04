@@ -1,13 +1,9 @@
 package com.hospital.komal;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.inputmethodservice.Keyboard;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,10 +11,6 @@ import android.widget.EditText;
 import com.hospital.komal.Desktop_Admin.Desktop_Admin;
 import com.hospital.komal.Doctor.Doctor;
 import com.hospital.komal.Patient.Patient;
-import com.hospital.komal.Staff_Member.Staff_Member;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by komal on 27-Sep-2019.
@@ -59,7 +51,7 @@ public class Login extends AppCompatActivity {
 
                 if (y.moveToFirst()) {
                     String ut = y.getString(7);
-                    Message.message(Login.this, "Welcome");
+
 
                     Bundle b = new Bundle();
                     b.putString("username", usernames);
@@ -68,12 +60,13 @@ public class Login extends AppCompatActivity {
 
                     Intent i;
                     if (ut.equals("Doctor")) {
+                        Message.message(Login.this, "Welcome Dr." +usernames);
                         i = new Intent(Login.this, Doctor.class);
                     } else if (ut.equals("Patient")) {
+                        Message.message(Login.this, "Welcome " +usernames);
                         i = new Intent(Login.this, Patient.class);
-                    } else if (ut.equals("Staff Member")) {
-                        i = new Intent(Login.this, Staff_Member.class);
                     } else {
+                        Message.message(Login.this, "Welcome " +usernames);
                         i = new Intent(Login.this, Desktop_Admin.class);
                     }
 
@@ -81,7 +74,7 @@ public class Login extends AppCompatActivity {
                     startActivity(i);
                 } else {
                     Message.message(Login.this, "No Such User Exists");
-                    Message.message(Login.this, "Please Register Your self");
+                    Message.message(Login.this, "Please Register Yourself");
                 }
 
                 y.close();
