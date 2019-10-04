@@ -8,6 +8,10 @@
     <string name="doctor_patient">DOCTOR_PATIENT</string>
     <string name="staff">STAFF</string>
     <string name="services_info">This app is used to create a system to manage all the operations associated with a Hospital. The different modules covered in this app are :</string>
-    <string name="services_modules">The different modules covered in this app are: Doctors, Patients, Staff members, Desktop_admin</string>
+    <string name="services_modules">Staff members, and admin which will control all the core tasks.</string>
     <string name="credits">Made by Komal Supekar</string>
+    <string name="doctor">details, specializations, appointments, leaves</string>
+    <string name="patients">details, bills, appointments with doctor, reports</string>
+    <string name="Staff">personal details, reports</string>
+    <string name="admin">which will control all the core management tasks.</string>
 </resources>

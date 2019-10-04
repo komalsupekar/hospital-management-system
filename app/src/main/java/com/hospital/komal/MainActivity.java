@@ -36,11 +36,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void onClick(View view) {
+    public void availDoctors(View view) {
         Intent i = new Intent(MainActivity.this, Doctors_available.class);
         startActivity(i);
     }
-    public void onClick2(View view) {
+    public void availServices(View view) {
         Intent i = new Intent(MainActivity.this, Services_offered.class);
         startActivity(i);
     }
