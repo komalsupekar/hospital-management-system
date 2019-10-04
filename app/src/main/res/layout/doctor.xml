@@ -89,14 +89,4 @@
         android:textAllCaps="false"
         android:textSize="17sp" />
 
-    <Button
-        android:id="@+id/b_feedback"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:onClick="onClick"
-        android:padding="15sp"
-        android:text="Give/View Feedback"
-        android:textAllCaps="false"
-        android:textSize="17sp" />
 </LinearLayout>

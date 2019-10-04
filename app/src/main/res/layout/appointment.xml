@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:onClick="onClick"
+        android:onClick="appointment"
         android:padding="15sp"
         android:text="New Appointment"
         android:textAllCaps="false"

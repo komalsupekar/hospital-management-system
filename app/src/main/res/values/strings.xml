@@ -14,4 +14,6 @@
     <string name="patients">details, bills, appointments with doctor, reports</string>
     <string name="Staff">personal details, reports</string>
     <string name="admin">which will control all the core management tasks.</string>
+    <string name="dhelp">Doctors need to add the Specialization and the preferred tme slot for the first time in order to get the appointments from patients, it\'s the mandatory step without which the doctors can\'t be shown in the appointments list</string>
+    <string name="phelp">patient will get the option to get an appointment with doctor, if the doctors add their time slot, from there they will have option to select preferred time slot for the appointment</string>
 </resources>

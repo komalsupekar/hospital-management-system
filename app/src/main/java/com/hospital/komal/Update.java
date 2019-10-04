@@ -1,26 +1,13 @@
 package com.hospital.komal;
 
-import android.app.Activity;
-import android.app.DialogFragment;
-import android.app.FragmentManager;
-import android.content.Intent;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
-
-import com.hospital.komal.Desktop_Admin.Desktop_Admin;
-import com.hospital.komal.Doctor.Doctor;
-import com.hospital.komal.Patient.Patient;
-import com.hospital.komal.Staff_Member.Staff_Member;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,7 +55,6 @@ public class Update extends AppCompatActivity {
         List<String> category = new ArrayList<>();
         category.add("Patient");
         category.add("Doctor");
-        category.add("Staff Member");
         category.add("Desktop Admin");
 
         List<String> genderc = new ArrayList<>();
@@ -99,20 +85,20 @@ public class Update extends AppCompatActivity {
         months.add("Nov");
         months.add("Dec");
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, category);
-        ArrayAdapter<String> adapterm = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, months);
-        ArrayAdapter<String> adapters = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, bgroupc);
-        ArrayAdapter<String> adapterb = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, genderc);
+        ArrayAdapter<String> acat = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, category);
+        ArrayAdapter<String> amonth = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, months);
+        ArrayAdapter<String> abgroup = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, bgroupc);
+        ArrayAdapter<String> agender = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, genderc);
 
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        adapterm.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        adapters.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        adapterb.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        acat.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        amonth.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        abgroup.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        agender.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        usertype.setAdapter(adapter);
-        mm.setAdapter(adapterm);
-        gender.setAdapter(adapters);
-        bgroup.setAdapter(adapterb);
+        usertype.setAdapter(acat);
+        mm.setAdapter(amonth);
+        gender.setAdapter(agender);
+        bgroup.setAdapter(abgroup);
 
         DatabaseHelper dh = new DatabaseHelper(this);
         Cursor z = dh.checkduplicates_in_user_credentials(username, pass, getResources().getString(R.string.user_credentials));
@@ -198,8 +184,6 @@ public class Update extends AppCompatActivity {
             usertype.setSelection(0);
         } else if (tmp.equals("Doctor")) {
             usertype.setSelection(1);
-        } else if (tmp.equals("Staff Member")) {
-            usertype.setSelection(2);
         } else {
             usertype.setSelection(3);
         }

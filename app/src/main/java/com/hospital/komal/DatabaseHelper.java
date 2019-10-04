@@ -154,10 +154,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             res = db.rawQuery("select * from " + TABLE_NAME_DOCTOR_PATIENT, new String[]{});
         } else if (table.equals("patient_identify")) {
             res = db.rawQuery("select * from " + TABLE_NAME_DOCTOR_PATIENT + " where p_username=? and p_password=?", new String[]{user_name, password});
-        } else if (table.equals(TABLE_NAME_FEEDBACK)) {
-            res = db.rawQuery("select * from " + TABLE_NAME_FEEDBACK + " where username=? and password=?", new String[]{user_name, password});
-        } else if (table.equals("all_feedback")) {
-            res = db.rawQuery("select * from " + TABLE_NAME_FEEDBACK, new String[]{});
         } else {
             res = db.rawQuery("select * from " + TABLE_NAME_DOCTOR_PATIENT + " where p_username=? and p_password=? and problem=?", new String[]{user_name, password, table});
         }

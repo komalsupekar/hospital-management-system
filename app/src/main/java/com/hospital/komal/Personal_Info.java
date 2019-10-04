@@ -18,7 +18,7 @@ public class Personal_Info extends AppCompatActivity {
 
     String username,password,user_type;
     DatabaseHelper db;
-    TextView name,age,gender,dob,bgroup,utype,city,pincode,mobno,uname,pword;
+    TextView name,age,gender,dob,bgroup,utype,city,pincode,mobno,uname;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +29,7 @@ public class Personal_Info extends AppCompatActivity {
         Bundle bb = getIntent().getExtras();
         username = bb.getString("username");
         password = bb.getString("password");
-        user_type = bb.getString("password");
+        user_type = bb.getString("user_type");
 
         name = (TextView) findViewById(R.id.name);
         age = (TextView) findViewById(R.id.age);
@@ -41,7 +41,6 @@ public class Personal_Info extends AppCompatActivity {
         pincode = (TextView) findViewById(R.id.pincode);
         mobno = (TextView) findViewById(R.id.tv_mno);
         uname = (TextView) findViewById(R.id.username);
-        pword = (TextView) findViewById(R.id.password);
 
         Cursor y = db.checkduplicates_in_user_credentials(username, password, getResources().getString(R.string.user_credentials));
 
@@ -59,11 +58,10 @@ public class Personal_Info extends AppCompatActivity {
             pincode.setText(y.getString(9));
             mobno.setText(y.getString(10));
             uname.setText(y.getString(12));
-            pword.setText(y.getString(11));
         }
     }
 
-    public void onClick(View view){
+    public void update(View view){
 
         Intent i;
         Bundle b = new Bundle();

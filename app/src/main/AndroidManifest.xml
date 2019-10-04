@@ -25,7 +25,7 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.hospital.komal.MainActivity" />
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity" />
         </activity>
 
         <activity android:name=".Register">
@@ -56,13 +56,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Staff_Member.Staff_Member">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
         <activity android:name=".Personal_Info">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -85,13 +78,6 @@
         </activity>
 
         <activity android:name=".Doctor.Doctor_Patient.Report_Upload">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".Feedback">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -196,12 +182,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Staff_Member.Assigned_Doctors">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
 
         <activity android:name=".Doctor.View_Assigned_Staff">
             <intent-filter>
@@ -235,7 +215,7 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.hospital.komal.MainActivity" />
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity" />
         </activity>
 
 
@@ -244,7 +224,15 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.hospital.komal.MainActivity" />
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity" />
+        </activity>
+
+        <activity android:name=".Help">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity" />
         </activity>
     </application>
 </manifest>
