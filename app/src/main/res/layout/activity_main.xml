@@ -70,18 +70,6 @@
             android:textAllCaps="false"
             android:textSize="17sp" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="100sp"
-            android:layout_gravity="bottom|end"
-            android:fontFamily="@font/butterfly_kids"
-            android:gravity="bottom"
-            android:text="Developed by Komal Supekar"
-            android:textAlignment="center"
-            android:textColor="@color/colorAccent"
-            android:textSize="30sp"
-            android:textStyle="bold" />
     </LinearLayout>
 </ScrollView>
 
