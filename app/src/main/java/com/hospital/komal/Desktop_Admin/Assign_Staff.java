@@ -89,8 +89,8 @@ public class Assign_Staff extends AppCompatActivity {
                 try {
                     String s = s_staff.getSelectedItem().toString();
                 }catch (Exception e){
-                    Log.d("madhu", "onClick: error" +e.getCause());
-                    Log.d("madhu", "onClick: error" +e.getMessage());
+                    Log.d("madhu", "Spinner: error" +e.getCause());
+                    Log.d("madhu", "Spinner: error" +e.getMessage());
                 }
 //      i am here
 

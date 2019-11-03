@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.hospital.komal.DatabaseHelper;
-import com.hospital.komal.Feedback;
 import com.hospital.komal.Patient.View_Report.View_Report;
 import com.hospital.komal.Personal_Info;
 import com.hospital.komal.R;
@@ -66,7 +65,7 @@ public class Patient extends AppCompatActivity {
                 i = new Intent(Patient.this, Bills.class);
                 break;
             default:
-                i = new Intent(Patient.this, Feedback.class);
+                i = null;
                 break;
         }
 

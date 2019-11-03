@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
+    android:layout_margin="16sp"
     android:orientation="vertical">
 
     <TextView
@@ -10,16 +10,16 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text="Report"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tv_report"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="15sp"
         android:gravity="center_horizontal"
         android:text="Report"
-        android:textSize="25dp" />
+        android:textSize="25sp" />
 
 </LinearLayout>

@@ -8,64 +8,70 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.whysoserious.neeraj.hospitalmanagementsystem.MainActivity">
+    tools:context="com.hospital.komal.MainActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="95dp"
+        android:layout_marginBottom="95sp"
         android:gravity="center"
         android:text="Welcome to HMS"
-        android:textSize="30dp" />
+        android:textSize="30sp" />
 
     <EditText
         android:id="@+id/etusername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginBottom="15sp"
+        android:layout_marginLeft="30sp"
+        android:layout_marginRight="30sp"
         android:gravity="center"
         android:hint="Username"
-        android:textSize="20dp" />
+        android:fontFamily="sans-serif"
+        style="@style/ipborder"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/etpassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginBottom="15sp"
+        android:layout_marginLeft="30sp"
+        android:layout_marginRight="30sp"
+        style="@style/ipborder"
         android:gravity="center"
         android:hint="Password"
-        android:password="true"
-        android:textSize="20dp" />
+        android:inputType="textPassword"
+        android:fontFamily="sans-serif"
+        android:textSize="20sp" />
+
+<!--    android:password="true"-->
 
     <Button
         android:id="@+id/blogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp"
+        android:paddingLeft="30sp"
+        android:paddingRight="30sp"
         android:text="Login" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginBottom="15sp"
+        android:layout_marginTop="30sp"
         android:gravity="center"
         android:text="or"
-        android:textSize="17dp" />
+        android:textSize="17sp" />
 
     <Button
         android:id="@+id/bregister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="15dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
+        android:layout_marginTop="15sp"
+        android:paddingLeft="20sp"
+        android:paddingRight="20sp"
         android:text="Register" />
 </LinearLayout>

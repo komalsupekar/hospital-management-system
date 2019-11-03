@@ -35,7 +35,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                             "first_name VARCHAR," +
                             "last_name VARCHAR," +
                             "age VARCHAR," +
-                            "sex VARCHAR," +
+                            "gender VARCHAR," +
                             "dob VARCHAR," +
                             "blood_group VARCHAR," +
                             "u_type VARCHAR," +
@@ -154,10 +154,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             res = db.rawQuery("select * from " + TABLE_NAME_DOCTOR_PATIENT, new String[]{});
         } else if (table.equals("patient_identify")) {
             res = db.rawQuery("select * from " + TABLE_NAME_DOCTOR_PATIENT + " where p_username=? and p_password=?", new String[]{user_name, password});
-        } else if (table.equals(TABLE_NAME_FEEDBACK)) {
-            res = db.rawQuery("select * from " + TABLE_NAME_FEEDBACK + " where username=? and password=?", new String[]{user_name, password});
-        } else if (table.equals("all_feedback")) {
-            res = db.rawQuery("select * from " + TABLE_NAME_FEEDBACK, new String[]{});
         } else {
             res = db.rawQuery("select * from " + TABLE_NAME_DOCTOR_PATIENT + " where p_username=? and p_password=? and problem=?", new String[]{user_name, password, table});
         }
@@ -165,14 +161,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     //INSERT INTO USER CREDENTIALS check duplication or alredy exists
-    public boolean insert_user_credentials(String fnames, String lnames, String ages, String dobs, String citys, String pincodes, String unames, String passwords, String mobnos, String utypes, String sexs, String bgroups) {
+    public boolean insert_user_credentials(String fnames, String lnames, String ages, String dobs, String citys, String pincodes, String unames, String passwords, String mobnos, String utypes, String genders, String bgroups) {
 
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("first_name", fnames);
         contentValues.put("last_name", lnames);
         contentValues.put("age", ages);
-        contentValues.put("sex", sexs);
+        contentValues.put("gender", genders);
         contentValues.put("blood_group", bgroups);
         contentValues.put("dob", dobs);
         contentValues.put("city", citys);
@@ -193,13 +189,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    public boolean update_user_credentials(String ou, String op, String fnames, String lnames, String ages, String dobs, String citys, String pincodes, String unames, String passwords, String mobnos, String utypes, String sexs, String bgroups) {
+    public boolean update_user_credentials(String ou, String op, String fnames, String lnames, String ages, String dobs, String citys, String pincodes, String unames, String passwords, String mobnos, String utypes, String genders, String bgroups) {
         SQLiteDatabase db1 = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("first_name", fnames);
         contentValues.put("last_name", lnames);
         contentValues.put("age", ages);
-        contentValues.put("sex", sexs);
+        contentValues.put("gender", genders);
         contentValues.put("blood_group", bgroups);
         contentValues.put("dob", dobs);
         contentValues.put("city", citys);

@@ -1,26 +1,18 @@
 package com.hospital.komal;
 
-import android.app.Activity;
-import android.app.DialogFragment;
-import android.app.FragmentManager;
 import android.content.Intent;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import com.hospital.komal.Desktop_Admin.Desktop_Admin;
 import com.hospital.komal.Doctor.Doctor;
 import com.hospital.komal.Patient.Patient;
-import com.hospital.komal.Staff_Member.Staff_Member;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,9 +23,9 @@ import java.util.List;
 public class Register extends AppCompatActivity {
 
     EditText fname, lname, age, dd, yy, city, pincode, mobno, uname, password;
-    String fnames, lnames, ages, sexs, bgroups, dobs, dds, yys, mms, citys, pincodes, mobnos, unames, passwords, utypes;
+    String fnames, lnames, ages, genders, bgroups, dobs, dds, yys, mms, citys, pincodes, mobnos, unames, passwords, utypes;
     Button register;
-    Spinner usertype, mm, sex, bgroup;
+    Spinner usertype, mm, gender, bgroup;
 
     DatabaseHelper dbh;
 
@@ -56,7 +48,7 @@ public class Register extends AppCompatActivity {
         register = (Button) findViewById(R.id.bregister);
         usertype = (Spinner) findViewById(R.id.spinnerusertype);
         mm = (Spinner) findViewById(R.id.spinnermonth);
-        sex = (Spinner) findViewById(R.id.spinnersex);
+        gender = (Spinner) findViewById(R.id.spinnergender);
         bgroup = (Spinner) findViewById(R.id.spinnerbgroup);
         dbh = new DatabaseHelper(this);
 
@@ -64,12 +56,11 @@ public class Register extends AppCompatActivity {
         List<String> category = new ArrayList<>();
         category.add("Patient");
         category.add("Doctor");
-        category.add("Staff Member");
-        category.add("Desktop Admin");
+        category.add("Admin");
 
-        List<String> sexc = new ArrayList<>();
-        sexc.add("Male");
-        sexc.add("Female");
+        List<String> genderc = new ArrayList<>();
+        genderc.add("Male");
+        genderc.add("Female");
 
         List<String> bgroupc = new ArrayList<>();
         bgroupc.add("A+");
@@ -95,20 +86,20 @@ public class Register extends AppCompatActivity {
         months.add("Nov");
         months.add("Dec");
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, category);
-        ArrayAdapter<String> adapterm = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, months);
-        ArrayAdapter<String> adapters = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, bgroupc);
-        ArrayAdapter<String> adapterb = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, sexc);
+        ArrayAdapter<String> acat = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, category);
+        ArrayAdapter<String> amonth = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, months);
+        ArrayAdapter<String> abgroup = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, bgroupc);
+        ArrayAdapter<String> agender = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, genderc);
 
 
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        adapterm.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        adapters.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        adapterb.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        usertype.setAdapter(adapter);
-        mm.setAdapter(adapterm);
-        sex.setAdapter(adapters);
-        bgroup.setAdapter(adapterb);
+        acat.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        amonth.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        abgroup.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        agender.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        usertype.setAdapter(acat);
+        mm.setAdapter(amonth);
+        gender.setAdapter(abgroup);
+        bgroup.setAdapter(agender);
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -126,7 +117,7 @@ public class Register extends AppCompatActivity {
                 mobnos = mobno.getText().toString();
                 utypes = usertype.getSelectedItem().toString();
                 mms = mm.getSelectedItem().toString();
-                sexs = sex.getSelectedItem().toString();
+                genders = gender.getSelectedItem().toString();
                 bgroups = bgroup.getSelectedItem().toString();
 
                 if (fnames.equals("") || lnames.equals("") || ages.equals("") || dds.equals("") ||
@@ -147,7 +138,7 @@ public class Register extends AppCompatActivity {
                             dds = "0" + dds;
                         dobs = dds + " " + mms + " " + yys;
 
-                        boolean b = dbh.insert_user_credentials(fnames, lnames, ages, dobs, citys, pincodes, unames, passwords, mobnos, utypes, sexs, bgroups);
+                        boolean b = dbh.insert_user_credentials(fnames, lnames, ages, dobs, citys, pincodes, unames, passwords, mobnos, utypes, genders, bgroups);
                         if (b) {
                             Intent i;
                             Bundle bb = new Bundle();
@@ -159,8 +150,6 @@ public class Register extends AppCompatActivity {
                                 i = new Intent(Register.this, Patient.class);
                             } else if (utypes.equals("Doctor")) {
                                 i = new Intent(Register.this, Doctor.class);
-                            } else if (utypes.equals("Staff Member")) {
-                                i = new Intent(Register.this, Staff_Member.class);
                             } else {
                                 i = new Intent(Register.this, Desktop_Admin.class);
                             }

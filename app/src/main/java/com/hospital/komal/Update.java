@@ -1,26 +1,13 @@
 package com.hospital.komal;
 
-import android.app.Activity;
-import android.app.DialogFragment;
-import android.app.FragmentManager;
-import android.content.Intent;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
-
-import com.hospital.komal.Desktop_Admin.Desktop_Admin;
-import com.hospital.komal.Doctor.Doctor;
-import com.hospital.komal.Patient.Patient;
-import com.hospital.komal.Staff_Member.Staff_Member;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,9 +18,9 @@ import java.util.List;
 public class Update extends AppCompatActivity {
 
     EditText fname, lname, age, dd, yy, city, pincode, mobno, uname, password;
-    String tmp, fnames, lnames, ages, sexs, bgroups, dobs, dds, yys, mms, citys, pincodes, mobnos, unames, passwords, utypes, username, pass, date, month, year;
+    String tmp, fnames, lnames, ages, genders, bgroups, dobs, dds, yys, mms, citys, pincodes, mobnos, unames, passwords, utypes, username, pass, date, month, year;
     Button register;
-    Spinner mm, sex, bgroup, usertype;
+    Spinner mm, gender, bgroup, usertype;
 
     DatabaseHelper dbh;
 
@@ -60,7 +47,7 @@ public class Update extends AppCompatActivity {
         password = (EditText) findViewById(R.id.etpassword);
         register = (Button) findViewById(R.id.bregister);
         mm = (Spinner) findViewById(R.id.spinnermonth);
-        sex = (Spinner) findViewById(R.id.spinnersex);
+        gender = (Spinner) findViewById(R.id.spinnergender);
         usertype = (Spinner) findViewById(R.id.spinnerusertype);
         bgroup = (Spinner) findViewById(R.id.spinnerbgroup);
         dbh = new DatabaseHelper(this);
@@ -68,12 +55,11 @@ public class Update extends AppCompatActivity {
         List<String> category = new ArrayList<>();
         category.add("Patient");
         category.add("Doctor");
-        category.add("Staff Member");
         category.add("Desktop Admin");
 
-        List<String> sexc = new ArrayList<>();
-        sexc.add("Male");
-        sexc.add("Female");
+        List<String> genderc = new ArrayList<>();
+        genderc.add("Male");
+        genderc.add("Female");
 
         List<String> bgroupc = new ArrayList<>();
         bgroupc.add("A+");
@@ -99,20 +85,20 @@ public class Update extends AppCompatActivity {
         months.add("Nov");
         months.add("Dec");
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, category);
-        ArrayAdapter<String> adapterm = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, months);
-        ArrayAdapter<String> adapters = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, bgroupc);
-        ArrayAdapter<String> adapterb = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, sexc);
+        ArrayAdapter<String> acat = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, category);
+        ArrayAdapter<String> amonth = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, months);
+        ArrayAdapter<String> abgroup = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, bgroupc);
+        ArrayAdapter<String> agender = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, genderc);
 
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        adapterm.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        adapters.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        adapterb.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        acat.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        amonth.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        abgroup.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        agender.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        usertype.setAdapter(adapter);
-        mm.setAdapter(adapterm);
-        sex.setAdapter(adapters);
-        bgroup.setAdapter(adapterb);
+        usertype.setAdapter(acat);
+        mm.setAdapter(amonth);
+        gender.setAdapter(agender);
+        bgroup.setAdapter(abgroup);
 
         DatabaseHelper dh = new DatabaseHelper(this);
         Cursor z = dh.checkduplicates_in_user_credentials(username, pass, getResources().getString(R.string.user_credentials));
@@ -141,9 +127,9 @@ public class Update extends AppCompatActivity {
         //SET SPINNERS
         tmp = z.getString(4);
         if (tmp.equals("Male")) {
-            sex.setSelection(0);
+            gender.setSelection(0);
         } else {
-            sex.setSelection(1);
+            gender.setSelection(1);
         }
 
         if (month.equals("Jan")) {
@@ -198,8 +184,6 @@ public class Update extends AppCompatActivity {
             usertype.setSelection(0);
         } else if (tmp.equals("Doctor")) {
             usertype.setSelection(1);
-        } else if (tmp.equals("Staff Member")) {
-            usertype.setSelection(2);
         } else {
             usertype.setSelection(3);
         }
@@ -220,7 +204,7 @@ public class Update extends AppCompatActivity {
                 passwords = password.getText().toString();
                 mobnos = mobno.getText().toString();
                 mms = mm.getSelectedItem().toString();
-                sexs = sex.getSelectedItem().toString();
+                genders = gender.getSelectedItem().toString();
                 bgroups = bgroup.getSelectedItem().toString();
                 utypes = usertype.getSelectedItem().toString();
 
@@ -234,7 +218,7 @@ public class Update extends AppCompatActivity {
                         dds = "0" + dds;
                     dobs = dds + " " + mms + " " + yys;
 
-                    boolean b = dbh.update_user_credentials(username, pass, fnames, lnames, ages, dobs, citys, pincodes, unames, passwords, mobnos, utypes, sexs, bgroups);
+                    boolean b = dbh.update_user_credentials(username, pass, fnames, lnames, ages, dobs, citys, pincodes, unames, passwords, mobnos, utypes, genders, bgroups);
 
                     if (b) {
                         Message.message(Update.this, "User Info Updated Sucessfully");
