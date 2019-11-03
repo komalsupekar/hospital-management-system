@@ -34,6 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:onClick="login"
+            style="@style/Base.Widget.AppCompat.Button.Small"
             android:padding="15sp"
             android:text="Login or Register"
             android:textAllCaps="false"
@@ -85,10 +86,11 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/butterfly_kids"
+            android:fontFamily="@font/myfont"
             android:textColor="@color/colorPrimary"
             android:padding="30sp"
             android:layout_gravity="center"
+            android:textAlignment="center"
             android:text="@string/credits" />
 
     </LinearLayout>
