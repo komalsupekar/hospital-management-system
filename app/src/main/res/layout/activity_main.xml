@@ -12,7 +12,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:background="@drawable/pngbg"
     tools:context="com.hospital.komal.MainActivity">
 
     <LinearLayout
@@ -20,26 +19,35 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="top"
+            android:adjustViewBounds="true"
+            android:scaleType="fitStart"
+            app:srcCompat="@drawable/pngbg" />
+
         <Button
             android:id="@+id/bloginregister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:padding="15sp"
             android:onClick="login"
+            android:padding="15sp"
             android:text="Login or Register"
             android:textAllCaps="false"
             android:textSize="17sp" />
 
         <Button
+            android:id="@+id/emergency"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/emergency"
             android:layout_gravity="center"
-            android:padding="15sp"
             android:onClick="emergency"
+            android:padding="15sp"
             android:text="Emergency services"
-            android:textSize="17sp"/>
+            android:textSize="17sp" />
 
         <Button
             android:layout_width="match_parent"
@@ -72,6 +80,16 @@
             android:text="Help"
             android:textAllCaps="false"
             android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/butterfly_kids"
+            android:textColor="@color/colorPrimary"
+            android:padding="30sp"
+            android:layout_gravity="center"
+            android:text="@string/credits" />
 
     </LinearLayout>
 </ScrollView>
