@@ -7,4 +7,7 @@
     <string name="all_pending_appointment">all_pending_appointment</string>
     <string name="doctor_patient">DOCTOR_PATIENT</string>
     <string name="staff">STAFF</string>
+    <string name="services_info">This app is used to create a system to manage all the operations associated with a Hospital. The different modules covered in this app are :</string>
+    <string name="services_modules">The different modules covered in this app are: Doctors, Patients, Staff members, Desktop_admin</string>
+    <string name="credits">Made by Komal Supekar</string>
 </resources>

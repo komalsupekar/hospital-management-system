@@ -9,16 +9,17 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:gravity="center"
-        android:text="This app is used to create a system to manage all the operations associated with a Hospital. THe different modules covered in this app are:"
-        android:textSize="30dp"
+        android:text="@string/services_info"
+        android:textSize="30sp"
         android:textStyle="bold" />
+
     <TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="16dp"
-    android:gravity="center"
-    android:text="The different modules covered in this app are: Doctors, Patients, Staff members, Desktop_admin"
-    android:textSize="30dp"
-    android:textStyle="bold" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:text="@string/services_modules"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
 </LinearLayout>

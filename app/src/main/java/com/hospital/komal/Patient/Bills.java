@@ -13,7 +13,7 @@ import com.hospital.komal.R;
 import java.util.ArrayList;
 
 /**
- * Created by komal on 027-Sep-2019.
+ * Created by komal on 27-Sep-2019.
  */
 public class Bills extends AppCompatActivity {
 
