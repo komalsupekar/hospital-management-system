@@ -23,15 +23,18 @@ public class MainActivity extends AppCompatActivity {
         SQLiteDatabase sqLiteDatabase = databaseHelper.getWritableDatabase();
 
 
-        Bloginregister = (Button) findViewById(R.id.bloginregister);
-        Bloginregister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, Login.class);
-                startActivity(i);
-            }
-        });
+    }
 
+    public void emergency(View view)
+    {
+        Intent h= new Intent(getApplicationContext(), emegency.class);
+        startActivity(h);
+    }
+
+    public void login(View view)
+    {
+        Intent i = new Intent(MainActivity.this, Login.class);
+        startActivity(i);
     }
 
     public void availDoctors(View view) {

@@ -26,7 +26,8 @@
         android:layout_marginLeft="30sp"
         android:layout_marginRight="30sp"
         android:gravity="center"
-        android:hint="Username"
+        android:hint="mobile number"
+        android:inputType="phone"
         android:fontFamily="sans-serif"
         style="@style/ipborder"
         android:textSize="20sp" />
