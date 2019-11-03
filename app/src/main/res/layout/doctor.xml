@@ -17,10 +17,10 @@
             android:id="@+id/tv_d_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="20sp"
             android:gravity="center_horizontal"
             android:text=""
-            android:textSize="30dp" />
+            android:textSize="30sp" />
     </LinearLayout>
 
     <Button
@@ -29,10 +29,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:onClick="onClick"
-        android:padding="15dp"
+        android:padding="15sp"
         android:text="Personal Info"
         android:textAllCaps="false"
-        android:textSize="17dp" />
+        android:textSize="17sp" />
 
     <Button
         android:id="@+id/b_add_specialization"
@@ -40,10 +40,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:onClick="onClick"
-        android:padding="15dp"
+        android:padding="15sp"
         android:text="Add/View Specializations"
         android:textAllCaps="false"
-        android:textSize="17dp" />
+        android:textSize="17sp" />
 
     <Button
         android:id="@+id/b_d_leaves"
@@ -51,10 +51,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:onClick="onClick"
-        android:padding="15dp"
+        android:padding="15sp"
         android:text="Apply/View Leaves"
         android:textAllCaps="false"
-        android:textSize="17dp" />
+        android:textSize="17sp" />
 
     <Button
         android:id="@+id/b_d_slot"
@@ -62,10 +62,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:onClick="onClick"
-        android:padding="15dp"
+        android:padding="15sp"
         android:text="Set Your Referrel Timings"
         android:textAllCaps="false"
-        android:textSize="17dp" />
+        android:textSize="17sp" />
 
     <Button
         android:id="@+id/b_d_upload_report"
@@ -73,10 +73,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:onClick="onClick"
-        android:padding="15dp"
+        android:padding="15sp"
         android:text="Upload Current Patient Report"
         android:textAllCaps="false"
-        android:textSize="17dp" />
+        android:textSize="17sp" />
 
     <Button
         android:id="@+id/b_d_staff_assigned"
@@ -84,19 +84,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:onClick="onClick"
-        android:padding="15dp"
+        android:padding="15sp"
         android:text="View Staff Assigned"
         android:textAllCaps="false"
-        android:textSize="17dp" />
+        android:textSize="17sp" />
 
-    <Button
-        android:id="@+id/b_feedback"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:onClick="onClick"
-        android:padding="15dp"
-        android:text="Give/View Feedback"
-        android:textAllCaps="false"
-        android:textSize="17dp" />
 </LinearLayout>

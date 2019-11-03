@@ -6,6 +6,34 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="spinnerStyle">@style/MySpinner</item>
     </style>
 
+
+    <!-- Base application theme (DARK). -->
+    <style name="AppTheme.Dark" parent="Theme.AppCompat">
+        ...
+        <item name="spinnerStyle">@style/MySpinner.Dark</item>
+    </style>
+
+    <style name="MySpinner" parent="Base.Widget.AppCompat.Spinner">
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+    </style>
+
+    <style name="MySpinner.Dark" parent="MySpinner">
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Dark</item>
+    </style>
+
+    <style name="ipborder">
+        <item name="android:background" >@drawable/border</item>
+        <item name="android:paddingTop">10sp</item>
+        <item name="android:paddingBottom">10sp</item>
+    </style>
+
+    <style name="margins">
+        <item name="android:layout_marginRight">10sp</item>
+        <item name="android:layout_marginLeft">10sp</item>
+        <item name="android:layout_marginTop">0sp</item>
+        <item name="android:layout_marginBottom">10sp</item>
+    </style>
 </resources>

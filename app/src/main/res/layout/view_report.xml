@@ -7,17 +7,17 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="16sp"
         android:gravity="center_horizontal"
         android:text="Reports"
-        android:textSize="25dp" />
+        android:textSize="25sp" />
 
     <ListView
         android:id="@+id/lv_reports"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:divider="#2f2f2f"
-        android:dividerHeight="0.5dp">
+        android:dividerHeight="0.5sp">
     </ListView>
 
 </LinearLayout>

@@ -10,7 +10,6 @@ import android.widget.TextView;
 import com.hospital.komal.DatabaseHelper;
 import com.hospital.komal.Doctor.Doctor_Patient.Report_Upload;
 import com.hospital.komal.Doctor.Leaves.Leaves;
-import com.hospital.komal.Feedback;
 import com.hospital.komal.Personal_Info;
 import com.hospital.komal.R;
 
@@ -73,8 +72,9 @@ public class Doctor extends AppCompatActivity {
             case R.id.b_d_slot:
                 i = new Intent(Doctor.this, D_Slot.class);
                 break;
+
             default:
-                i = new Intent(Doctor.this, Feedback.class);
+                i = null;
                 break;
         }
         i.putExtras(b);

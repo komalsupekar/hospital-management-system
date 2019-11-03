@@ -7,10 +7,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="16sp"
         android:gravity="center"
         android:text="Doctors Available"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
     <ListView
@@ -19,6 +19,6 @@
         android:layout_height="match_parent"
         android:layout_weight="35"
         android:divider="#2f2f2f"
-        android:dividerHeight="0.5dp" />
+        android:dividerHeight="0.5sp" />
 
 </LinearLayout>

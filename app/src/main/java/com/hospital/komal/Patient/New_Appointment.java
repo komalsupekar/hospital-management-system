@@ -52,7 +52,7 @@ public class New_Appointment extends AppCompatActivity {
         slot.setAdapter(adapter_slot);
     }
 
-    public void onClick(View view) {
+    public void search(View view) {
 
         Bundle b = new Bundle();
         b.putString("username", username);

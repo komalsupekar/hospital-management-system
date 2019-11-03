@@ -17,16 +17,16 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="10sp"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
+                android:layout_marginBottom="15sp"
                 android:gravity="center"
                 android:text="Register"
-                android:textSize="30dp"
+                android:textSize="30sp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -39,31 +39,31 @@
                     android:id="@+id/etfname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5sp"
+                    android:layout_marginLeft="5sp"
+                    android:layout_marginRight="5sp"
                     android:layout_weight="50"
                     android:gravity="center"
                     android:hint="First name"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/etlname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5sp"
+                    android:layout_marginLeft="5sp"
+                    android:layout_marginRight="5sp"
                     android:layout_weight="50"
                     android:gravity="center"
                     android:hint="Last name"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="10sp"
                 android:orientation="horizontal"
                 android:weightSum="100">
 
@@ -72,18 +72,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5sp"
+                    android:layout_marginRight="5sp"
                     android:layout_weight="50"
                     android:gravity="center"
                     android:hint="Age"
                     android:inputType="number"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
 
                 <Spinner
-                    android:id="@+id/spinnersex"
+                    android:id="@+id/spinnergender"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="50sp"
                     android:layout_weight="50"
                     android:background="@android:drawable/btn_dropdown"
                     android:spinnerMode="dropdown" />
@@ -94,7 +94,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="10sp"
 
                 android:orientation="horizontal"
                 android:weightSum="100">
@@ -102,20 +102,20 @@
                 <EditText
                     android:id="@+id/etdd"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="50sp"
                     android:layout_gravity="bottom"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5sp"
+                    android:layout_marginRight="5sp"
                     android:layout_weight="39"
                     android:gravity="center"
                     android:hint="dd"
                     android:inputType="date"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
 
                 <Spinner
                     android:id="@+id/spinnermonth"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="50sp"
                     android:layout_weight="27"
                     android:background="@android:drawable/btn_dropdown"
                     android:spinnerMode="dropdown" />
@@ -123,15 +123,15 @@
                 <EditText
                     android:id="@+id/etyy"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="50sp"
                     android:layout_gravity="bottom"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5sp"
+                    android:layout_marginRight="5sp"
                     android:layout_weight="33"
                     android:gravity="center"
                     android:hint="yyyy"
                     android:inputType="date"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
 
 
             </LinearLayout>
@@ -140,7 +140,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="10sp"
 
                 android:orientation="horizontal"
                 android:weightSum="100">
@@ -149,7 +149,7 @@
                 <Spinner
                     android:id="@+id/spinnerbgroup"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="50sp"
                     android:layout_weight="50"
                     android:background="@android:drawable/btn_dropdown"
                     android:spinnerMode="dropdown" />
@@ -157,7 +157,7 @@
                 <Spinner
                     android:id="@+id/spinnerusertype"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="50sp"
                     android:layout_weight="50"
                     android:background="@android:drawable/btn_dropdown"
                     android:spinnerMode="dropdown" />
@@ -169,7 +169,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="10sp"
 
                 android:orientation="horizontal"
                 android:weightSum="100">
@@ -178,70 +178,70 @@
                     android:id="@+id/etcity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5sp"
+                    android:layout_marginLeft="5sp"
+                    android:layout_marginRight="5sp"
                     android:layout_weight="50"
                     android:gravity="center"
                     android:hint="City"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/etpin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5sp"
+                    android:layout_marginLeft="5sp"
+                    android:layout_marginRight="5sp"
                     android:layout_weight="50"
                     android:gravity="center"
                     android:hint="Pincode"
                     android:inputType="number"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <EditText
                 android:id="@+id/etmobile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5sp"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
                 android:gravity="center"
                 android:hint="Mobile no."
                 android:inputType="phone"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/etusername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5sp"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
                 android:gravity="center"
                 android:hint="Username"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/etpassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5sp"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
                 android:gravity="center"
                 android:hint="Password"
                 android:password="true"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/bregister"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:paddingLeft="30dp"
-                android:paddingRight="30dp"
+                android:paddingLeft="30sp"
+                android:paddingRight="30sp"
                 android:text="Register" />
         </LinearLayout>
     </ScrollView>

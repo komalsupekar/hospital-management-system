@@ -27,7 +27,7 @@ public class Appointment extends AppCompatActivity {
         user_type = bb.getString("user_type");
     }
 
-    public void onClick(View view){
+    public void appointment(View view){
 
         Intent i;
         Bundle b = new Bundle();
@@ -40,9 +40,7 @@ public class Appointment extends AppCompatActivity {
             case R.id.b_new:
                 i = new Intent(Appointment.this, New_Appointment.class);
                 break;
-           /* case R.id.b_wait:
-                i = new Intent(Appointment.this, Wait_Appointment.class);
-                break;*/
+
             default:
                 i = new Intent(Appointment.this, Confirmed_Appointment.class);
                 break;

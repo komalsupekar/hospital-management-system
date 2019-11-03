@@ -2,24 +2,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
-    android:layout_marginTop="16dp"
+    android:layout_marginLeft="16sp"
+    android:layout_marginRight="16sp"
+    android:layout_marginTop="16sp"
     android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="30sp"
         android:gravity="center_horizontal"
         android:text="Your Current Slot"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="20sp"
         android:orientation="horizontal"
         android:weightSum="100">
 
@@ -30,7 +30,7 @@
             android:layout_weight="30"
             android:gravity="center_horizontal"
             android:text="-"
-            android:textSize="30dp"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
         <TextView
@@ -39,7 +39,7 @@
             android:layout_weight="40"
             android:gravity="center_horizontal"
             android:text="to"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
@@ -49,26 +49,26 @@
             android:layout_weight="30"
             android:gravity="center_horizontal"
             android:text="-"
-            android:textSize="30dp"
+            android:textSize="30sp"
             android:textStyle="bold" />
     </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="30sp"
         android:gravity="center_horizontal"
         android:text="Update Your Slot"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:textStyle="bold" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="10sp"
         android:gravity="start"
         android:text="From: "
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <LinearLayout
@@ -80,7 +80,7 @@
             android:id="@+id/ss"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="10sp"
             android:layout_weight="50"
             android:background="@android:drawable/btn_dropdown"
             android:spinnerMode="dropdown" />
@@ -89,7 +89,7 @@
             android:id="@+id/ts"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="10sp"
             android:layout_weight="50"
             android:background="@android:drawable/btn_dropdown"
             android:spinnerMode="dropdown" />
@@ -99,10 +99,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="10sp"
         android:gravity="start"
         android:text="To: "
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <LinearLayout
@@ -114,7 +114,7 @@
             android:id="@+id/se"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="10sp"
             android:layout_weight="50"
             android:background="@android:drawable/btn_dropdown"
             android:spinnerMode="dropdown" />
@@ -123,7 +123,7 @@
             android:id="@+id/te"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="10sp"
             android:layout_weight="50"
             android:background="@android:drawable/btn_dropdown"
             android:spinnerMode="dropdown" />
@@ -133,7 +133,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="20dp"
+        android:layout_margin="20sp"
         android:onClick="onClick"
         android:padding="15sp"
         android:text="Update"
