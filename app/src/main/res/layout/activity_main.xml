@@ -25,8 +25,8 @@
             android:layout_width="wrap_content"
             android:layout_gravity="top"
             android:adjustViewBounds="true"
-            android:scaleType="fitStart"
-            app:srcCompat="@drawable/pngbg" />
+            android:src="@drawable/pngbg"
+            android:scaleType="fitStart" />
 
         <Button
             android:id="@+id/bloginregister"
